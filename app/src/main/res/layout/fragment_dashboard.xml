@@ -1,13 +1,214 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragmentbackcolor"
+    android:scrollbars="none"
     tools:context="com.cardroid.psl.obdcardroid.Fragments.Dashboard">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                card_view:cardElevation="3dp"
+                card_view:cardBackgroundColor="@color/yellowtiles"
+                card_view:cardUseCompatPadding="true"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:text="MPG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:layout_gravity="center_horizontal"
+                    android:typeface="serif"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="18.3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                card_view:cardBackgroundColor="@color/greentiles"
+                card_view:cardElevation="3dp"
+                card_view:cardUseCompatPadding="true"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="RPM X 1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:layout_gravity="center_horizontal"
+                    android:typeface="serif"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/rpm"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:text="1.3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                card_view:cardElevation="3dp"
+                card_view:cardBackgroundColor="@color/bluetiles"
+                card_view:cardUseCompatPadding="true"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:text="Eng. Temp %F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:layout_gravity="center_horizontal"
+                    android:typeface="serif"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="91"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                card_view:cardBackgroundColor="@color/redtiles"
+                card_view:cardElevation="3dp"
+                card_view:cardUseCompatPadding="true"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="% Idling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:layout_gravity="center_horizontal"
+                    android:typeface="serif"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/rpm"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:text="55.6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

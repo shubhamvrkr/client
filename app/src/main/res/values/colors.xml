@@ -5,4 +5,11 @@
     <color name="colorAccent">#FF4081</color>
     <color name="vehicleinfotextcolor">#48444A</color>
     <color name="vehicleinfotitlecolor">#3498CA</color>
+    <color name="fragmentbackcolor">#F8F5F9</color>
+    <color name="darkgrey">#212121</color>
+    <color name="navitempressed">#4d4d4d</color>
+    <color name="yellowtiles">#F6CB00</color>
+    <color name="bluetiles">#2C59C3</color>
+    <color name="greentiles">#00CA74</color>
+    <color name="redtiles">#E4004C</color>
 </resources>

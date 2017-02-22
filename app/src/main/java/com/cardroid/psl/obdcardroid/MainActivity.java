@@ -1,14 +1,17 @@
 package com.cardroid.psl.obdcardroid;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenuView;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -44,6 +47,13 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        if (navigationView != null) {
+
+            NavigationMenuView navigationMenuView = (NavigationMenuView) navigationView.getChildAt(0);
+            if (navigationMenuView != null) {
+                navigationMenuView.setVerticalScrollBarEnabled(false);
+            }
+        }
         onNavigationItemSelected(navigationView.getMenu().getItem(viewId));
 
 
@@ -62,7 +72,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-       // getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -74,7 +84,34 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_quit) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
+            builder.setMessage("Are you sure you want to close the application?");
+            String positiveText = getString(android.R.string.yes);
+            builder.setPositiveButton(positiveText,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // positive button logic
+                            finish();
+                        }
+                    });
+
+            String negativeText = getString(android.R.string.no);
+            builder.setNegativeButton(negativeText,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // negative button logic
+                            dialog.dismiss();
+                        }
+                    });
+
+            AlertDialog dialog = builder.create();
+            // display dialog
+            dialog.show();
+
             return true;
         }
 
@@ -95,7 +132,7 @@ public class MainActivity extends AppCompatActivity
 
             viewId =0;
             fragment = new Dashboard();
-            title ="Dashboard";
+            title ="Live Data";
 
         } else if (id == R.id.requests) {
 
@@ -178,7 +215,7 @@ public class MainActivity extends AppCompatActivity
         if(viewId==0){
 
             fragment = new Dashboard();
-            title ="Dashboard";
+            title ="Live Data";
 
         }else if(viewId==1){
 

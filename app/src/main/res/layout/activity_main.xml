@@ -18,9 +18,12 @@
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:background="@color/fragmentbackcolor"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+        app:itemTextColor="@drawable/activated_background_text"
+        app:itemBackground="@drawable/activated_background" />
 
 </android.support.v4.widget.DrawerLayout>

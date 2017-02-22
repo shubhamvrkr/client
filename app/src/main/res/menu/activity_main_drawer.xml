@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/dashboard"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Dashboard" />
+            android:icon="@drawable/nav_dashboard"
+            android:title="Live Data" />
         <item
             android:id="@+id/requests"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/nav_token"
             android:title="Requests" />
         <item
             android:id="@+id/vehicalinfo"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/nav_vehivlereport"
             android:title="Vehical Info." />
         <item
             android:id="@+id/aboutus"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/nav_aboutus"
             android:title="About us" />
     </group>
 
@@ -24,15 +24,15 @@
         <menu>
             <item
                 android:id="@+id/setting"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/nav_settings"
                 android:title="Setting" />
             <item
                 android:id="@+id/sos"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/nav_sos"
                 android:title="SOS" />
             <item
                 android:id="@+id/senddata"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/nav_send"
                 android:title="Send Data" />
         </menu>
     </item>
