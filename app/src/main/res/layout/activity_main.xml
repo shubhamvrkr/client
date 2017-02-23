@@ -24,6 +24,6 @@
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
         app:itemTextColor="@drawable/activated_background_text"
-        app:itemBackground="@drawable/activated_background" />
+        app:itemBackground="@drawable/activated_background"/>
 
 </android.support.v4.widget.DrawerLayout>

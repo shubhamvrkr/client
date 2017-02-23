@@ -10,70 +10,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="1dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginLeft="1dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
 
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <RelativeLayout
+                android:id="@+id/rpmtile"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
-                card_view:cardElevation="3dp"
-                card_view:cardBackgroundColor="@color/yellowtiles"
-                card_view:cardUseCompatPadding="true"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/shadow_layout_blue"
                 android:layout_weight="1">
 
-
-                <TextView
-                    android:text="MPG"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/dashboardtiles_text_title"
-                    android:layout_gravity="center_horizontal"
-                    android:typeface="serif"/>
-
-                <ImageView
-                    android:layout_width="@dimen/dashboardtiles_text_image"
-                    android:layout_height="@dimen/dashboardtiles_text_image"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/rpm"/>
-
-                <TextView
-                    android:text="18.3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView3"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:paddingLeft="5dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/dashboardtiles_text_value"
-                    android:layout_gravity="center"/>
-
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dashboardtiles"
-                card_view:cardBackgroundColor="@color/greentiles"
-                card_view:cardElevation="3dp"
-                card_view:cardUseCompatPadding="true"
-                android:layout_weight="1">
 
                 <TextView
                     android:text="RPM X 1000"
@@ -82,31 +37,77 @@
                     android:paddingTop="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dashboardtiles_text_title"
-                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/rpmtitile"
+                    android:layout_centerHorizontal="true"
                     android:typeface="serif"/>
 
                 <ImageView
                     android:layout_width="@dimen/dashboardtiles_text_image"
                     android:layout_height="@dimen/dashboardtiles_text_image"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/rpmtitile"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/rpm"
-                    android:layout_weight="1"/>
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/rpm"/>
 
                 <TextView
-                    android:text="1.3"
+                    android:text="_ _"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
-                    android:gravity="center"
-                    android:layout_marginTop="8dp"
+                    android:id="@+id/rpmtv"
+                    android:layout_marginTop="10dp"
                     android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/rpmtitile"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dashboardtiles_text_value"
                     android:layout_gravity="center"/>
 
-            </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ecttile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                android:background="@drawable/shadow_layout_blue"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="ECT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:id="@+id/ecttitile"
+                    android:layout_centerHorizontal="true"
+                    android:typeface="serif"/>/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_below="@+id/ecttitile"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="_ _"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ecttv"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ecttitile"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+            </RelativeLayout>
 
 
         </LinearLayout>
@@ -114,99 +115,303 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
 
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <RelativeLayout
+                android:id="@+id/loadtile"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
-                card_view:cardElevation="3dp"
-                card_view:cardBackgroundColor="@color/bluetiles"
-                card_view:cardUseCompatPadding="true"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/shadow_layout_blue"
                 android:layout_weight="1">
 
 
                 <TextView
-                    android:text="Eng. Temp %F"
+                    android:text="Eng. Load %"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dashboardtiles_text_title"
-                    android:layout_gravity="center_horizontal"
-                    android:typeface="serif"/>
+                    android:id="@+id/loadtitile"
+                    android:layout_centerHorizontal="true"
+                    android:typeface="serif"/>/>
 
                 <ImageView
                     android:layout_width="@dimen/dashboardtiles_text_image"
                     android:layout_height="@dimen/dashboardtiles_text_image"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/loadtitile"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
                     app:srcCompat="@drawable/rpm"/>
 
                 <TextView
-                    android:text="91"
+                    android:text="_ _"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView4"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
+                    android:id="@+id/engloadtv"
+                    android:layout_marginTop="10dp"
                     android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/loadtitile"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dashboardtiles_text_value"
                     android:layout_gravity="center"/>
 
 
-            </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
-            <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
-                card_view:cardBackgroundColor="@color/redtiles"
-                card_view:cardElevation="3dp"
-                card_view:cardUseCompatPadding="true"
+                android:id="@+id/maptile"
+                android:background="@drawable/shadow_layout_green"
                 android:layout_weight="1">
 
                 <TextView
-                    android:text="% Idling"
+                    android:text="MAP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dashboardtiles_text_title"
-                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/maptitile"
+                    android:layout_centerHorizontal="true"
+                    android:typeface="serif"/>/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_below="@+id/maptitile"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="_ _"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maptv"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/maptitile"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                android:layout_marginRight="1dp"
+                android:id="@+id/stfttile"
+                android:background="@drawable/shadow_layout_red"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:text="STFT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:id="@+id/stfttitile"
+                    android:layout_centerHorizontal="true"
+                    android:typeface="serif"/>/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_below="@+id/stfttitile"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="_ _"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stfttv"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/stfttitile"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                android:id="@+id/ltfttile"
+                android:background="@drawable/shadow_layout_yellow"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="LTFT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:id="@+id/ltfttitle"
+                    android:layout_centerHorizontal="true"
+                    android:typeface="serif"/>/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_below="@+id/ltfttitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="_ _"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ltfttv"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ltfttitle"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                android:id="@+id/batteryvoltagetile"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/shadow_layout_green"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:text="Battery Voltage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:id="@+id/batterylifetitle"
+                    android:layout_centerHorizontal="true"
+                    android:typeface="serif"/>/>
+
+                <ImageView
+                    android:layout_width="@dimen/dashboardtiles_text_image"
+                    android:layout_height="@dimen/dashboardtiles_text_image"
+                    android:layout_below="@+id/batterylifetitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/rpm"/>
+
+                <TextView
+                    android:text="_ _"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mvtv"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/batterylifetitle"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_value"
+                    android:layout_gravity="center"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/healthstatustile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboardtiles"
+                android:background="@drawable/shadow_layout_green"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Due Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dashboardtiles_text_title"
+                    android:id="@+id/duedatetitle"
+                    android:layout_centerHorizontal="true"
                     android:typeface="serif"/>
 
                 <ImageView
                     android:layout_width="@dimen/dashboardtiles_text_image"
                     android:layout_height="@dimen/dashboardtiles_text_image"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/duedatetitle"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
-                    app:srcCompat="@drawable/rpm"
-                    android:layout_weight="1"/>
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/calender"/>
 
                 <TextView
-                    android:text="55.6"
+                    android:text="_ _"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView5"
-                    android:gravity="center"
-                    android:layout_marginTop="8dp"
+                    android:id="@+id/duedatetv"
+                    android:layout_marginTop="10dp"
                     android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/duedatetitle"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/dashboardtiles_text_value"
                     android:layout_gravity="center"/>
 
-            </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
 
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="#C3C3C3"
+            android:layout_height="@dimen/dashboardtiles"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/healthstatusbutton" />
 
     </LinearLayout>
 

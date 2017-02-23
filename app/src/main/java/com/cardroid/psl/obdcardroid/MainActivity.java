@@ -15,6 +15,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -53,8 +54,11 @@ public class MainActivity extends AppCompatActivity
             if (navigationMenuView != null) {
                 navigationMenuView.setVerticalScrollBarEnabled(false);
             }
+
         }
+
         onNavigationItemSelected(navigationView.getMenu().getItem(viewId));
+        drawer.openDrawer(GravityCompat.START);
 
 
     }

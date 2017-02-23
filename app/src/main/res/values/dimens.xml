@@ -8,8 +8,8 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="vehicleinfotextsize">14sp</dimen>
     <dimen name="dashboardtiles">100dp</dimen>
-    <dimen name="dashboardtiles_text_title">16sp</dimen>
-    <dimen name="dashboardtiles_text_value">32sp</dimen>
+    <dimen name="dashboardtiles_text_title">14sp</dimen>
+    <dimen name="dashboardtiles_text_value">30sp</dimen>
     <dimen name="dashboardtiles_text_image">30dp</dimen>
 
 </resources>
