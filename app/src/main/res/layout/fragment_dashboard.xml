@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
                 android:layout_marginRight="1dp"
-                android:background="@drawable/shadow_layout_blue"
+                android:background="@drawable/shadow_layout_green"
                 android:layout_weight="1">
 
 
@@ -63,15 +63,13 @@
                     android:textSize="@dimen/dashboardtiles_text_value"
                     android:layout_gravity="center"/>
 
-
-
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/ecttile"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
-                android:background="@drawable/shadow_layout_blue"
+                android:background="@drawable/shadow_layout_red"
                 android:layout_weight="1">
 
                 <TextView
@@ -92,7 +90,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/rpm"/>
+                    app:srcCompat="@drawable/coolant_temp"/>
 
                 <TextView
                     android:text="_ _"
@@ -125,7 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
                 android:layout_marginRight="1dp"
-                android:background="@drawable/shadow_layout_blue"
+                android:background="@drawable/shadow_layout_green"
                 android:layout_weight="1">
 
 
@@ -147,7 +145,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/rpm"/>
+                    app:srcCompat="@drawable/engine"/>
+
 
                 <TextView
                     android:text="_ _"
@@ -190,8 +189,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/rpm"/>
-
+                    app:srcCompat="@drawable/manifold_1"/>
                 <TextView
                     android:text="_ _"
                     android:layout_width="wrap_content"
@@ -245,7 +243,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/rpm"/>
+                    app:srcCompat="@drawable/fuel_trim"/>
 
                 <TextView
                     android:text="_ _"
@@ -288,7 +286,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/rpm"/>
+                    app:srcCompat="@drawable/fuel_trim"/>
+
 
                 <TextView
                     android:text="_ _"
@@ -307,6 +306,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -342,7 +342,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/rpm"/>
+                    app:srcCompat="@drawable/battery"/>
+
 
                 <TextView
                     android:text="_ _"
@@ -361,7 +362,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/healthstatustile"
+                android:id="@+id/duedatetile"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dashboardtiles"
                 android:background="@drawable/shadow_layout_green"
@@ -385,7 +386,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/calender"/>
+                    app:srcCompat="@drawable/calendar"/>
 
                 <TextView
                     android:text="_ _"

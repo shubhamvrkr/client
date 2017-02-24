@@ -23,6 +23,12 @@ import com.cardroid.psl.obdcardroid.Fragments.Aboutus;
 import com.cardroid.psl.obdcardroid.Fragments.Dashboard;
 import com.cardroid.psl.obdcardroid.Fragments.Request;
 import com.cardroid.psl.obdcardroid.Fragments.VehicleInfo;
+import com.cardroid.psl.obdcardroid.MockClasses.CSVFile;
+import com.cardroid.psl.obdcardroid.MockClasses.DashboardObj;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,Aboutus.OnFragmentInteractionListener,Dashboard.OnFragmentInteractionListener
@@ -31,6 +37,8 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView;
     int viewId = 0;
+    static List scoreList = new ArrayList<DashboardObj>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +65,10 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+
+       /* InputStream inputStream = getResources().openRawResource();
+        CSVFile csvFile = new CSVFile(inputStream);
+        scoreList = csvFile.read();*/
         onNavigationItemSelected(navigationView.getMenu().getItem(viewId));
         drawer.openDrawer(GravityCompat.START);
 
@@ -250,4 +262,9 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+    public static List getData(){
+
+        return scoreList;
+    }
+
 }

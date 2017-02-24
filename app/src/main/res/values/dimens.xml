@@ -10,6 +10,6 @@
     <dimen name="dashboardtiles">100dp</dimen>
     <dimen name="dashboardtiles_text_title">14sp</dimen>
     <dimen name="dashboardtiles_text_value">30sp</dimen>
-    <dimen name="dashboardtiles_text_image">30dp</dimen>
+    <dimen name="dashboardtiles_text_image">40dp</dimen>
 
 </resources>

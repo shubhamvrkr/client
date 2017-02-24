@@ -7,7 +7,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.cardroid.psl.obdcardroid.MainActivity;
+import com.cardroid.psl.obdcardroid.MockClasses.DashboardObj;
+import com.cardroid.psl.obdcardroid.R;
+
+import java.util.ArrayList;
+import java.util.List;
 import com.cardroid.psl.obdcardroid.R;
 
 /**
@@ -28,6 +36,10 @@ public class Dashboard extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    RelativeLayout rpmtile,ecttile,loadtile,maptile,stfttile,ltfttile,batteryvoltagetile,duedatetile;
+    TextView rpmtitle,ectitile,loadtitle,maptitle,stfttitle,ltfttitle,batteryvoltagetitle,duedatetitle;
+    List<DashboardObj> list = new ArrayList<DashboardObj>();
+    private int counter = 0;
     private OnFragmentInteractionListener mListener;
 
     public Dashboard() {
@@ -43,6 +55,7 @@ public class Dashboard extends Fragment {
      * @return A new instance of fragment Dashboard.
      */
     // TODO: Rename and change types and number of parameters
+
     public static Dashboard newInstance(String param1, String param2) {
         Dashboard fragment = new Dashboard();
         Bundle args = new Bundle();
@@ -65,11 +78,22 @@ public class Dashboard extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        initialize(view);
+        list = MainActivity.getData();
+        if(list.isEmpty()){
+            setDashboardTiles();
+        }else{
+
+
+        }
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
+
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
@@ -105,5 +129,34 @@ public class Dashboard extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+    public void initialize(View view){
+
+        rpmtile = (RelativeLayout) view.findViewById(R.id.rpmtile);
+        ecttile = (RelativeLayout) view.findViewById(R.id.ecttile);
+        loadtile = (RelativeLayout) view.findViewById(R.id.loadtile);
+        maptile = (RelativeLayout) view.findViewById(R.id.maptile);
+        stfttile = (RelativeLayout) view.findViewById(R.id.stfttile);
+        ltfttile = (RelativeLayout) view.findViewById(R.id.ltfttile);
+        batteryvoltagetile = (RelativeLayout) view.findViewById(R.id.batteryvoltagetile);
+        duedatetile = (RelativeLayout) view.findViewById(R.id.duedatetile);
+
+
+        rpmtitle =(TextView) view.findViewById(R.id.rpmtitile);
+        ectitile = (TextView) view.findViewById(R.id.ecttitile);
+        loadtitle = (TextView) view.findViewById(R.id.loadtitile);
+        maptitle = (TextView) view.findViewById(R.id.maptitile);
+        stfttitle = (TextView) view.findViewById(R.id.stfttitile);
+        ltfttitle = (TextView) view.findViewById(R.id.ltfttitle);
+        batteryvoltagetitle = (TextView) view.findViewById(R.id.batterylifetitle);
+        duedatetitle = (TextView) view.findViewById(R.id.duedatetitle);
+
+
+    }
+    public void setDashboardTiles(){
+
+
+
+
     }
 }
